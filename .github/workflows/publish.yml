@@ -10,6 +10,7 @@ jobs:
   publish:
     if: github.repository == 'yca-software/design-system'
     runs-on: ubuntu-latest
+    environment: github
     permissions:
       contents: read
       id-token: write
@@ -37,5 +38,3 @@ jobs:
 
       - name: Publish to npm
         run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -6,7 +6,11 @@ Shared React component library built with shadcn/ui and Tailwind CSS. Published 
 
 Publishing is handled by GitHub Actions (`.github/workflows/publish.yml`).
 
-- Configure `NPM_TOKEN` in repository secrets (npm automation token for the `@yca-software` scope)
+- Configure npm Trusted Publishing for this package:
+  - npm package settings -> Trusted publishers
+  - Add GitHub repository `yca-software/design-system`
+  - Add workflow `.github/workflows/publish.yml`
+  - Add environment `github`
 - Bump `version` in `package.json`
 - Create and push a version tag (`vX.Y.Z`) to trigger publish
 - Or run the workflow manually from GitHub Actions (`workflow_dispatch`)
