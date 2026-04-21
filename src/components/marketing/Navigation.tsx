@@ -53,12 +53,12 @@ export function Navigation({ logo, logoHref, links, cta, className }: Navigation
                 <a
                   href={logoHref}
                   aria-label="Go to top"
-                  className="text-xl font-extrabold tracking-tight text-foreground sm:text-2xl"
+                  className="text-xl font-bold tracking-tight text-foreground sm:text-2xl"
                 >
                   {logo}
                 </a>
               ) : (
-                <span className="text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">
+                <span className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">
                   {logo}
                 </span>
               )
@@ -132,12 +132,12 @@ export function Navigation({ logo, logoHref, links, cta, className }: Navigation
                   <a
                     href={logoHref}
                     aria-label="Go to top"
-                    className="text-xl font-extrabold tracking-tight text-foreground"
+                    className="text-xl font-bold tracking-tight text-foreground"
                   >
                     {logo}
                   </a>
                 ) : (
-                  <span className="text-xl font-extrabold tracking-tight text-foreground">
+                  <span className="text-xl font-bold tracking-tight text-foreground">
                     {logo}
                   </span>
                 )
