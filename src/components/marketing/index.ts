@@ -23,3 +23,4 @@ export * from "./ContactSection";
 export * from "./BlogTeaser";
 export * from "./PromoBanner";
 export * from "./TrustBadges";
+export * from "./ErrorSpotlight";
