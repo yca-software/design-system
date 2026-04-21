@@ -19,6 +19,7 @@ export interface NavigationCTA {
 /** Props for the Navigation component. */
 export interface NavigationProps {
   logo: React.ReactNode;
+  logoHref?: string;
   links: NavigationLink[];
   cta?: NavigationCTA;
   className?: string;
@@ -28,7 +29,7 @@ export interface NavigationProps {
  * Marketing site header with logo, nav links, optional CTA, and mobile drawer.
  * Uses a portaled overlay on small screens; locks body scroll when open.
  */
-export function Navigation({ logo, links, cta, className }: NavigationProps) {
+export function Navigation({ logo, logoHref, links, cta, className }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
 
@@ -51,9 +52,19 @@ export function Navigation({ logo, links, cta, className }: NavigationProps) {
       <div className="mx-auto flex h-16 w-full max-w-full items-center justify-between gap-8 px-4 sm:px-6 lg:px-8">
         <div className="flex shrink-0 items-center">
           {typeof logo === "string" ? (
-            <span className="text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">
-              {logo}
-            </span>
+            logoHref ? (
+              <a
+                href={logoHref}
+                aria-label="Go to top"
+                className="text-xl font-extrabold tracking-tight text-foreground sm:text-2xl"
+              >
+                {logo}
+              </a>
+            ) : (
+              <span className="text-xl font-extrabold tracking-tight text-foreground sm:text-2xl">
+                {logo}
+              </span>
+            )
           ) : (
             logo
           )}
@@ -122,9 +133,19 @@ export function Navigation({ logo, links, cta, className }: NavigationProps) {
               <div className="flex h-16 shrink-0 items-center justify-between border-b border-border/60 px-5">
                 <div onClick={() => setMobileMenuOpen(false)}>
                   {typeof logo === "string" ? (
-                    <span className="text-xl font-extrabold tracking-tight text-foreground">
-                      {logo}
-                    </span>
+                    logoHref ? (
+                      <a
+                        href={logoHref}
+                        aria-label="Go to top"
+                        className="text-xl font-extrabold tracking-tight text-foreground"
+                      >
+                        {logo}
+                      </a>
+                    ) : (
+                      <span className="text-xl font-extrabold tracking-tight text-foreground">
+                        {logo}
+                      </span>
+                    )
                   ) : (
                     logo
                   )}
