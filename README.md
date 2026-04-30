@@ -2,6 +2,28 @@
 
 Shared React component library built with shadcn/ui and Tailwind CSS. Published as a **public** npm package.
 
+## Quick Start
+
+Install:
+
+```bash
+pnpm add @yca-software/design-system
+```
+
+Import global styles once:
+
+```css
+@import "tailwindcss";
+@import "@yca-software/design-system/styles.css";
+```
+
+## Project Policies
+
+- Contribution guide: `CONTRIBUTING.md`
+- Security policy: `SECURITY.md`
+- Code of conduct: `CODE_OF_CONDUCT.md`
+- License: `LICENSE`
+
 ## Publishing to npm
 
 Publishing is handled by GitHub Actions (`.github/workflows/publish.yml`).
