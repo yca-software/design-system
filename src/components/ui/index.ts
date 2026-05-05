@@ -2,6 +2,7 @@
 export * from "./alert";
 export * from "./alert-dialog";
 export * from "./avatar";
+export * from "./badge";
 export * from "./button";
 export * from "./calendar";
 export * from "./card";
@@ -14,6 +15,7 @@ export * from "./dropdown-menu";
 export * from "./form-drawer";
 export * from "./form-submit-button";
 export * from "./input";
+export * from "./image-dropzone";
 export * from "./label";
 export * from "./link";
 export * from "./popover";
