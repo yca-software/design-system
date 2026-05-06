@@ -18,6 +18,7 @@ export * from "./input";
 export * from "./image-dropzone";
 export * from "./label";
 export * from "./link";
+export * from "./multi-select";
 export * from "./popover";
 export * from "./scroll-area";
 export * from "./select";
